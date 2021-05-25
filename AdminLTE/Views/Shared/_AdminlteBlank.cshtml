@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewData["Title"]</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="~/adminlte/components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/adminlte/components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/adminlte/components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/adminlte/dist/css/AdminLTE.min.css">
+
+    <link href="~/css/SansPro.css" rel="stylesheet" />
+    <link href="~/lib/toastr/toastr.min.css" rel="stylesheet" />
+
+    @RenderSection("Styles", required: false)
+
+</head>
+<body class="hold-transition lockscreen" style="background-image: url('/images/D.jpg') ; background-size: cover; ">
+    <div class="lockscreen-wrapper">
+        @RenderBody()
+        <div class="text-center">
+            <a href="@Url.Action("Login", "Account")">Or sign in as a different user</a>
+        </div>
+    </div>
+    <script src="~/lib/toastr/toastr.min.js"></script>
+    <script src="~/adminlte/components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
